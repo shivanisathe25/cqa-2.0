@@ -30,7 +30,7 @@ cqa-2.0/
 
 ## 🚀 Quick Start
 
-### Installation (5 minutes)
+### Installation (3 minutes)
 
 1. **Clone this repository:**
    ```bash
@@ -38,24 +38,18 @@ cqa-2.0/
    cd cqa-2.0
    ```
 
-2. **Run installation:**
+2. **Run installation** (automatically copies skill + standards):
    ```bash
    cd .claude/skills
    ./install.sh ~/your-doc-project
    ```
 
-3. **Copy standards folder:**
-   ```bash
-   cd ../..
-   cp -r standards ~/your-doc-project/
-   ```
-
-4. **⚠️ ADD your product-specific OPL PDF:**
+3. **⚠️ ADD your product-specific OPL PDF:**
    ```bash
    cp /path/to/your/OPL-ProductName.pdf ~/your-doc-project/standards/
    ```
 
-5. **Verify setup:**
+4. **Verify setup:**
    ```bash
    cd ~/your-doc-project
    ./standards/verify-setup.sh
@@ -214,12 +208,9 @@ cat assessments/assessment_openshift-docs_2026-02-27.md
 # Update this repo
 git pull origin main
 
-# Reinstall skill
+# Reinstall skill (automatically updates standards too)
 cd .claude/skills
 ./install.sh ~/your-project
-
-# Copy updated standards
-cp -r standards ~/your-project/
 ```
 
 ### Update Product OPL
@@ -239,10 +230,11 @@ cp /path/to/new/OPL-YourProduct.pdf standards/
 
 **"Skill not found"**
 - Verify: `ls -la .claude/skills/doc-quality-audit.md`
-- Reinstall: `cd .claude/skills && ./install.sh ~/your-project`
+- Reinstall: `cd cqa-2.0/.claude/skills && ./install.sh ~/your-project`
 
 **"Standards not found"**
-- Copy standards: `cp -r standards ~/your-project/`
+- Reinstall: `cd cqa-2.0/.claude/skills && ./install.sh ~/your-project`
+- The install script automatically copies the standards folder
 
 **"Product name validation incomplete"**
 - Add product OPL: `cp OPL-YourProduct.pdf ~/your-project/standards/`

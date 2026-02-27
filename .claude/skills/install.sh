@@ -5,17 +5,21 @@ set -e
 
 SKILL_NAME="doc-quality-audit"
 SKILL_FILE="${SKILL_NAME}.md"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
 
 echo "🔧 Installing ${SKILL_NAME} skill..."
 
 # Determine installation directory
 if [ -d ".claude/skills" ]; then
     # Project-local installation
+    PROJECT_DIR="$(pwd)"
     INSTALL_DIR=".claude/skills"
     echo "📁 Installing to project directory: ${INSTALL_DIR}"
 elif [ ! -z "$1" ]; then
     # User specified directory
-    INSTALL_DIR="$1/.claude/skills"
+    PROJECT_DIR="$(cd "$1" && pwd)"
+    INSTALL_DIR="${PROJECT_DIR}/.claude/skills"
     echo "📁 Installing to specified directory: ${INSTALL_DIR}"
 else
     echo "❌ Error: No .claude/skills directory found in current project."
@@ -36,17 +40,24 @@ else
     exit 1
 fi
 
+# Copy standards folder automatically
+if [ -d "${REPO_ROOT}/standards" ]; then
+    echo "📦 Copying standards folder..."
+    cp -r "${REPO_ROOT}/standards" "${PROJECT_DIR}/"
+    echo "✅ Standards folder copied to ${PROJECT_DIR}/standards/"
+else
+    echo "⚠️  Warning: standards folder not found at ${REPO_ROOT}/standards"
+    echo "   Please copy it manually"
+fi
+
 echo ""
 echo "✅ Installation complete!"
 echo ""
-echo "⚠️  IMPORTANT: Required Setup Steps"
+echo "⚠️  IMPORTANT: Final Required Step"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "1. Copy standards folder to your project:"
-echo "   cp -r standards/ /path/to/your/project/"
-echo ""
-echo "2. ADD your product-specific OPL PDF:"
-echo "   cp /path/to/your/OPL-ProductName.pdf /path/to/your/project/standards/"
+echo "1. ADD your product-specific OPL PDF (REQUIRED):"
+echo "   cp /path/to/your/OPL-ProductName.pdf ${PROJECT_DIR}/standards/"
 echo ""
 echo "   Examples:"
 echo "   - OPL-OpenShift.pdf"
@@ -55,14 +66,14 @@ echo "   - OPL-Ansible.pdf"
 echo ""
 echo "   ⚠️  This is REQUIRED for accurate product name validation!"
 echo ""
-echo "3. Verify setup:"
-echo "   cd /path/to/your/project"
+echo "2. Verify setup:"
+echo "   cd ${PROJECT_DIR}"
 echo "   ./standards/verify-setup.sh"
 echo ""
-echo "📖 Usage (after setup):"
+echo "📖 Usage (after adding OPL PDF):"
 echo "   Audit all files in /path/to/docs-repo"
 echo "   Audit the files in <folder>"
 echo "   Audit assembly-file.adoc and its modules"
 echo ""
 echo "📋 For detailed requirements, see:"
-echo "   standards/REQUIRED_FILES_README.md"
+echo "   ${PROJECT_DIR}/standards/REQUIRED_FILES_README.md"
