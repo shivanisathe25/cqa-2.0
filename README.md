@@ -2,7 +2,7 @@
 
 A comprehensive CQA 2.1 (Content Quality Assessment) skill for auditing Red Hat technical documentation with automated batch processing and full repository support.
 
-[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/yourusername/doc-quality-audit-skill)
+[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/shivanisathe25/doc-quality-audit-skill)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
 
 ---
@@ -52,7 +52,7 @@ doc-quality-audit-skill/
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/yourusername/doc-quality-audit-skill.git
+   git clone https://github.com/shivanisathe25/doc-quality-audit-skill.git
    cd doc-quality-audit-skill
    ```
 
@@ -188,7 +188,6 @@ Fix the errors listed above
 ## 📚 Documentation
 
 - **[Quick Start Guide](docs/QUICK_START_GUIDE.md)** - Get up and running
-- **[Solution Summary](docs/SOLUTION_SUMMARY.md)** - Technical details
 - **[Slash Command Guide](docs/HOW_TO_MAKE_SLASH_COMMAND.md)** - Advanced: Convert to /command
 - **[Required Files](standards/REQUIRED_FILES_README.md)** - Setup requirements
 
@@ -272,4 +271,4 @@ cp /path/to/new/OPL-YourProduct.pdf standards/
 1. Review [Quick Start Guide](docs/QUICK_START_GUIDE.md)
 2. Review [Required Files README](standards/REQUIRED_FILES_README.md)
 3. Run verification: `./standards/verify-setup.sh`
-4. [Open an issue](https://github.com/yourusername/doc-quality-audit-skill/issues)
+4. [Open an issue](https://github.com/shivanisathe25/doc-quality-audit-skill/issues)
