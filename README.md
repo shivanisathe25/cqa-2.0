@@ -2,7 +2,20 @@
 
 A comprehensive CQA 2.1 (Content Quality Assessment) skill for auditing Red Hat technical documentation with automated batch processing and full repository support.
 
-> ⚠️ **Before you start:** Have your **product-specific OPL PDF** ready (e.g., `OPL-OpenShift.pdf`, `OPL-RHEL.pdf`). See [Prerequisites](#️-prerequisites) below.
+---
+
+## ⚠️ Prerequisites
+
+You need to have:
+
+1. **Claude Code** installed and configured
+2. **Your product-specific OPL PDF** ready
+   - File name format: `OPL-<ProductName>.pdf`
+   - Examples: `OPL-OpenShift.pdf`, `OPL-RHEL.pdf`, `OPL-Ansible.pdf`
+   - **Where to get it:** Product docs repository, team lead, or Brand/Legal team
+   - ⚠️ **CRITICAL:** Required for accurate product name validation (CQA 7.1)
+
+> **Don't have your product OPL?** The installation will work, but product name validation will be incomplete. Get your OPL PDF before running audits.
 
 ---
 
@@ -27,21 +40,6 @@ cqa-2.0/
 │   ├── QUICK_START_GUIDE.md
 └── README.md                        # This file
 ```
-
----
-
-## ⚠️ Prerequisites
-
-You need to have:
-
-1. **Claude Code** installed and configured
-2. **Your product-specific OPL PDF** ready
-   - File name format: `OPL-<ProductName>.pdf`
-   - Examples: `OPL-OpenShift.pdf`, `OPL-RHEL.pdf`, `OPL-Ansible.pdf`
-   - **Where to get it:** Product docs repository, team lead, or Brand/Legal team
-   - ⚠️ **CRITICAL:** Required for accurate product name validation (CQA 7.1)
-
-> **Don't have your product OPL?** The installation will work, but product name validation will be incomplete. Get your OPL PDF before running audits.
 
 ---
 
