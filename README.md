@@ -1,18 +1,6 @@
 # Content Quality Analysis 2.0
 
 A comprehensive CQA 2.1 (Content Quality Assessment) skill for auditing Red Hat technical documentation with automated batch processing and full repository support.
----
-
-## 🎯 Features
-
-- ✅ **Full Repository Audits** - Process 100+ files automatically
-- ✅ **Assembly-Based Reports** - Organized by assemblies and their modules
-- ✅ **17 CQA 2.1 Checks** - Comprehensive quality assessment
-- ✅ **Automatic Verification** - Pre-flight checks for required files
-- ✅ **Product-Specific OPL Support** - Validates product names correctly
-- ✅ **Natural Language Interface** - No complex commands to remember
-- ✅ **Batch Processing** - Progress tracking for large repos
-- ✅ **Character Count Resolution** - Automatic attribute expansion
 
 ---
 
