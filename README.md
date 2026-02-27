@@ -92,8 +92,8 @@ Audit all files in /path/to/docs-repo
 
 **Alternative phrasings:**
 - `Assess all documentation in /path/to/docs`
-- `Run CQA audit on configuring/`
-- `Audit assembly-monitoring.adoc and all its modules`
+- `Run CQA audit on <folder-name>/`
+- `Audit assembly-<assembly-name>.adoc and all its modules`
 
 **Note:** This is NOT a slash command - use plain English!
 
@@ -256,29 +256,7 @@ cp /path/to/new/OPL-YourProduct.pdf standards/
 ./standards/verify-setup.sh
 ```
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Create a Pull Request
-
----
-
-## 📄 License
-
-Apache License 2.0 - See [LICENSE](LICENSE) file for details.
-
----
-
-## 🆘 Support
-
-### Common Issues
+## Common Issues
 
 **"Skill not found"**
 - Verify: `ls -la .claude/skills/doc-quality-audit.md`
@@ -297,38 +275,3 @@ Apache License 2.0 - See [LICENSE](LICENSE) file for details.
 2. Review [Required Files README](standards/REQUIRED_FILES_README.md)
 3. Run verification: `./standards/verify-setup.sh`
 4. [Open an issue](https://github.com/yourusername/doc-quality-audit-skill/issues)
-
----
-
-## 🎉 Credits
-
-Developed for Red Hat documentation teams to streamline CQA 2.1 pre-migration assessments.
-
-**Maintained by:** [Your Name/Team]
-
-**Version:** 2.0 (Full repository audit support)
-
-**Standards:** CQA 2.1 - Content Quality Assessment
-
----
-
-## 📊 Statistics
-
-- **Lines of Code:** ~2,000 (skill workflow + verification)
-- **Documentation:** ~15,000 words
-- **Templates:** 4 official AsciiDoc templates
-- **Assessment Checks:** 17 CQA 2.1 requirements
-- **Supported File Types:** Assembly, Concept, Procedure, Reference
-- **Max Repository Size:** Tested with 100+ files
-
----
-
-## 🔗 Related Projects
-
-- [Modular Documentation Reference Guide](https://redhat-documentation.github.io/modular-docs/)
-- [Red Hat Peer Review Guide](https://redhat-documentation.github.io/peer-review/)
-- [JTBD Analysis Skills](https://github.com/yourusername/jtbd-skills)
-
----
-
-**Happy Auditing! 🚀**
