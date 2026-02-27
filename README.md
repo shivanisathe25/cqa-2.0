@@ -247,10 +247,3 @@ cp /path/to/new/OPL-YourProduct.pdf standards/
 **"Product name validation incomplete"**
 - Add product OPL: `cp OPL-YourProduct.pdf ~/your-project/standards/`
 - Verify: `./standards/verify-setup.sh`
-
-### Getting Help
-
-1. Review [Quick Start Guide](docs/QUICK_START_GUIDE.md)
-2. Review [Required Files README](standards/REQUIRED_FILES_README.md)
-3. Run verification: `./standards/verify-setup.sh`
-4. [Open an issue](https://github.com/shivanisathe25/cqa-2.0/issues)
