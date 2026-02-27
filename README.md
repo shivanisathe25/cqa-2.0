@@ -43,7 +43,7 @@ cqa-2.0/
 
 ## 🚀 Quick Start
 
-### Installation (3 minutes)
+### Installation
 
 > **Note:** Install CQA 2.0 **once** in a central location, then use it to set up any documentation project.
 
