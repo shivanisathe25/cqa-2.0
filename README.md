@@ -32,7 +32,7 @@ cqa-2.0/
 
 ## ⚠️ Prerequisites
 
-Before installing, make sure you have:
+You need to have:
 
 1. **Claude Code** installed and configured
 2. **Your product-specific OPL PDF** ready
