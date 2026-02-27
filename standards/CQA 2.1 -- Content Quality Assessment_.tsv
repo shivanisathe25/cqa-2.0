@@ -1,0 +1,85 @@
+Pre-Migration Requirements							
+							
+							
+Create a copy of this document for use with your content.  							
+Tip: unhide assessment proposal columns to facilitate asynchronous reviews by multiple associates. (Double click the arrows between columns B and F.) When everybody has finished and an agreement is reached, put the result in the Assessment field (column F).							
+							
+							
+Assessment levels	Score						
+Meets criteria	4						
+Mostly meets criteria	3				Important/negotiable only		
+Mostly does not meet criteria	2				Important/negotiable only		
+Does not meet criteria	1						
+Not applicable							
+No data							
+Not applicable	No score				Indicates that the quality measure does not apply to the content you are assessing 		
+No data	No score				Indicates that you have not assessed the quality measure yet. 		
+							
+							
+Basic information							
+Content location	Enter location						
+Date of review							
+							
+Vale instructions							
+							
+The CQA includes using required vale tools to identify and fix asciidoc content so that it can be migrated.  Complete the following steps:							
+1. Time saver! Run the Asciidoc Content Type Editor and fix any errors.							
+    Fixing content type issues before running the asciidoctor-data-vale tool fixes a lot of potential errors. 							
+2. Run the Vale asciidoctor-dita-vale tool check and address any errors and warnings. (See row 37)							
+     See the ToolX migration tool page for more information. 							
+       Tip: Use the Vale CLI to scan many files at once. Use the Vale VS Code extension to find the issues in the files.							
+3. Complete the rest of the items (rows 33 and following) on the Pre-migration tab.							
+4. Continue to use the Vale VS Code extension to lint your content as you continue to work before migration so that you don't add migration issues.							
+							
+Asciidoc 							
+							
+Requirement	Quality level	Column 8	Column 7	Column 6	Assessment	Score (auto-populated)	Notes
+Content passes this Vale asciidoctor-dita-vale tool check with no errors or warnings	Required/non-negotiable				No data		The AsciiDocDITA tool identifies markup that does not have a direct equivalent in DITA 1.3. See the readme for details about specific issues that it finds.  Note: The AsciiDocDITA tool is updated frequently. 
+Assemblies should contain only an introductory section, which can be one or more paragraphs, and include statements. You can also have an Additional resources section at the end of the assembly, after all of the includes. DITA maps do not accept text between include statements for modules.	Required/non-negotiable				No data		Note: Will be added to Vale check shortly.
+							
+							
+Modularization							
+							
+Requirement	Quality level	Column 8	Column 7	Column 6	Assessment	Score (auto-populated)	Notes
+"Content is modularized - task for claude: assess the ""modular-docs.md"" file in this folder for this point."	Required/non-negotiable	No data	No data	No data	No data		
+"Modules use the official templates: - Concept - Procedure - Reference: task for claude: assess the template files in the ""templates"" folder located here for this point."	Required/non-negotiable				No data		
+"All Required/non-negotiable modular elements are present - task for claude: assess the ""Modular-documentation-templates-checklist.txt"" for this point."	Required/non-negotiable				No data		See (WIP) Modular documentation templates checklist
+"Assemblies use the official template. Assemblies are one user story. - task for claude: assess the template files in the ""templates"" folder located here for this point."	Required/non-negotiable				No data		
+"Content is not deeply nested in the TOC (recommended: no more than 3 levels) - task for claude - automatically assess this as ""meets criteria"""	Important/negotiable				No data		Note: For migration, you can start counting levels where your content starts, not including categories and the repetitive book titles that Pantheon generates. 
+							
+							
+Titles and short descriptions							
+							
+Requirement	Quality level	Column 8	Column 7	Column 6	Assessment	Score (auto-populated)	Notes
+"Modules and assemblies start with a clear short description. A short description:   - Describes why the user should read the content - Uses concise language that will be used as a link preview or for summaries in search results - Includes keywords that users are likey to search on for SEO and AI  - Must not include self referential language (""This document describes..."") "	Required/non-negotiable				No data		See the following doc about shortdesc in DITA:  https://docs.oasis-open.org/dita/dita/v1.3/errata02/os/complete/part3-all-inclusive/langRef/base/shortdesc.html
+"In asciidoc, short descriptions must be: - be a single paragraph between 50 and 300 characters  - Introduced with [role=""_abstract""]  - Include a blank line between the level 0 (=) title and the short description in asciidoc"	Required/non-negotiable				No data		Note: See Rewrite for Impact: DITA short descriptions
+Content has a short, long, and descriptive title (requires DITA support)	Important/negotiable				No data		
+"Titles are brief, complete, and descriptive - task for claude: for procedure module title,  assess the ""modular-docs.md"" file in this folder for this point, also assess ""peer-review-style.md"", the style section for titles"	Required/non-negotiable				No data		Use the following guidelines for titles: - Procedure modules in the Modular documentation reference guide - Peer review checklist for style in Red Hat peer review guide for technical documentation
+							
+							
+Procedures							
+							
+Requirement	Quality level	Column 8	Column 7	Column 6	Assessment	Score (auto-populated)	Notes
+If a procedures includes prerequisites:  - Use the Prerequisites label - Use consistent formatting  Do not exceed 10 prerequisites.  Do not include steps in prerequisites.	Required/non-negotiable				No data		
+							
+							
+Editorial							
+							
+Requirement	Quality level	Column 8	Column 7	Column 6	Assessment	Score (auto-populated)	Notes
+Content is grammatically correct and follows rules of American English grammar	Required/non-negotiable				No data		
+Information is conveyed using the correct content type	Required/non-negotiable				No data		
+							
+							
+URLs and links							
+							
+Requirement	Quality level	Column 8	Column 7	Column 6	Assessment	Score (auto-populated)	Notes
+No broken links	Required/non-negotiable				No data		
+Redirects (if needed) are in place and work correctly	Required/non-negotiable				No data		
+Page is interlinked and within three clicks of the domain’s home page	Important/negotiable				No data		
+							
+							
+Legal and Branding							
+							
+Requirement	Quality level	Assessment Proposal 1	Assessment Proposal 2	Assessment Proposal 3	Assessment	Score (auto-populated)	Notes
+"Official product names are used task for claude: assess the ""<product>-product-page.md"" files in this folder for this point."	Required/non-negotiable				No data		
+Includes appropriate, legal-approved disclaimers for Technology Preview and Developer Preview features/content	Required/non-negotiable				No data		You can use snippets for these disclaimers in assembly files. They will resolve appropriately during migration. 
