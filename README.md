@@ -2,7 +2,7 @@
 
 A comprehensive CQA 2.1 (Content Quality Assessment) skill for auditing Red Hat technical documentation with automated batch processing and full repository support.
 
-[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/shivanisathe25/doc-quality-audit-skill)
+[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/shivanisathe25/cqa-2.0)
 [![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
 
 ---
@@ -23,7 +23,7 @@ A comprehensive CQA 2.1 (Content Quality Assessment) skill for auditing Red Hat 
 ## 📦 What's Included
 
 ```
-doc-quality-audit-skill/
+cqa-2.0/
 ├── .claude/
 │   └── skills/
 │       ├── doc-quality-audit.md    # Main skill workflow
@@ -52,8 +52,8 @@ doc-quality-audit-skill/
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/shivanisathe25/doc-quality-audit-skill.git
-   cd doc-quality-audit-skill
+   git clone https://github.com/shivanisathe25/cqa-2.0.git
+   cd cqa-2.0
    ```
 
 2. **Run installation:**
@@ -271,4 +271,4 @@ cp /path/to/new/OPL-YourProduct.pdf standards/
 1. Review [Quick Start Guide](docs/QUICK_START_GUIDE.md)
 2. Review [Required Files README](standards/REQUIRED_FILES_README.md)
 3. Run verification: `./standards/verify-setup.sh`
-4. [Open an issue](https://github.com/shivanisathe25/doc-quality-audit-skill/issues)
+4. [Open an issue](https://github.com/shivanisathe25/cqa-2.0/issues)
