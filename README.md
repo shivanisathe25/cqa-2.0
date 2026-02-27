@@ -1,4 +1,4 @@
-# Doc Quality Audit Skill for Claude Code
+# Content Quality Analysis 2.0
 
 A comprehensive CQA 2.1 (Content Quality Assessment) skill for auditing Red Hat technical documentation with automated batch processing and full repository support.
 
