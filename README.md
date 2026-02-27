@@ -32,26 +32,30 @@ cqa-2.0/
 
 ### Installation (3 minutes)
 
-1. **Clone this repository:**
+> **Note:** Install CQA 2.0 **once** in a central location, then use it to set up any documentation project.
+
+1. **Clone this repository** (one-time setup):
    ```bash
+   cd ~
    git clone https://github.com/shivanisathe25/cqa-2.0.git
-   cd cqa-2.0
    ```
 
-2. **Run installation** (automatically copies skill + standards):
+2. **Install into your documentation project:**
    ```bash
-   cd .claude/skills
-   ./install.sh ~/your-doc-project
+   cd ~/cqa-2.0/.claude/skills
+   ./install.sh /path/to/your-doc-project
    ```
+
+   This automatically copies the skill and standards to your doc project.
 
 3. **⚠️ ADD your product-specific OPL PDF:**
    ```bash
-   cp /path/to/your/OPL-ProductName.pdf ~/your-doc-project/standards/
+   cp /path/to/your/OPL-ProductName.pdf /path/to/your-doc-project/standards/
    ```
 
 4. **Verify setup:**
    ```bash
-   cd ~/your-doc-project
+   cd /path/to/your-doc-project
    ./standards/verify-setup.sh
    ```
 
@@ -59,10 +63,14 @@ cqa-2.0/
 
 ### Usage
 
-Open your project in Claude Code and use natural language:
+Open your documentation project in Claude Code and use natural language:
 
 ```
-Audit all files in /path/to/docs-repo
+cd /path/to/your-doc-project
+claude
+
+# Then in Claude:
+Audit all files in .
 ```
 
 **Alternative phrasings:**
@@ -174,21 +182,33 @@ Fix the errors listed above
 ### Scenario: Pre-Migration Assessment
 
 ```bash
-# 1. Open project in Claude Code
+# 1. Clone CQA 2.0 (one-time setup)
+cd ~
+git clone https://github.com/shivanisathe25/cqa-2.0.git
+
+# 2. Install into your OpenShift docs project
+cd ~/cqa-2.0/.claude/skills
+./install.sh ~/openshift-docs
+
+# 3. Add product-specific OPL and verify
+cp ~/downloads/OPL-OpenShift.pdf ~/openshift-docs/standards/
 cd ~/openshift-docs
+./standards/verify-setup.sh
+
+# 4. Open project in Claude Code
 claude
 
-# 2. Request audit (natural language)
-You: Audit all files in /home/user/openshift-docs
+# 5. Request audit (natural language)
+You: Audit all files in .
 
-# 3. Claude automatically:
+# 6. Claude automatically:
 #    ✓ Verifies prerequisites
 #    ✓ Discovers 106 .adoc files
 #    ✓ Groups by assemblies
 #    ✓ Processes all files
 #    ✓ Generates comprehensive report
 
-# 4. Review report
+# 7. Review report
 cat assessments/assessment_openshift-docs_2026-02-27.md
 
 # Output shows:
@@ -205,12 +225,13 @@ cat assessments/assessment_openshift-docs_2026-02-27.md
 ### Keeping Your Setup Current
 
 ```bash
-# Update this repo
+# Update CQA 2.0
+cd ~/cqa-2.0
 git pull origin main
 
-# Reinstall skill (automatically updates standards too)
+# Reinstall into your doc project (updates skill + standards)
 cd .claude/skills
-./install.sh ~/your-project
+./install.sh /path/to/your-doc-project
 ```
 
 ### Update Product OPL
@@ -230,10 +251,10 @@ cp /path/to/new/OPL-YourProduct.pdf standards/
 
 **"Skill not found"**
 - Verify: `ls -la .claude/skills/doc-quality-audit.md`
-- Reinstall: `cd cqa-2.0/.claude/skills && ./install.sh ~/your-project`
+- Reinstall: `cd ~/cqa-2.0/.claude/skills && ./install.sh /path/to/your-doc-project`
 
 **"Standards not found"**
-- Reinstall: `cd cqa-2.0/.claude/skills && ./install.sh ~/your-project`
+- Reinstall: `cd ~/cqa-2.0/.claude/skills && ./install.sh /path/to/your-doc-project`
 - The install script automatically copies the standards folder
 
 **"Product name validation incomplete"**
