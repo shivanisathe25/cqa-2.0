@@ -23,8 +23,6 @@ cqa-2.0/
 │   └── verify-setup.sh              # Automated verification
 ├── docs/
 │   ├── QUICK_START_GUIDE.md
-│   ├── SOLUTION_SUMMARY.md
-│   └── HOW_TO_MAKE_SLASH_COMMAND.md
 └── README.md                        # This file
 ```
 
