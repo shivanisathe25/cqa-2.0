@@ -1,10 +1,6 @@
 # Content Quality Analysis 2.0
 
 A comprehensive CQA 2.1 (Content Quality Assessment) skill for auditing Red Hat technical documentation with automated batch processing and full repository support.
-
-[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/shivanisathe25/cqa-2.0)
-[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
-
 ---
 
 ## 🎯 Features
