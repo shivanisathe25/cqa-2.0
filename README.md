@@ -76,14 +76,14 @@ cqa-2.0/
 
 ### Usage
 
-Open your documentation project in Claude Code and use natural language:
+Open your documentation project in Claude Code and use the following prompt: 
 
 ```
 cd /path/to/your-doc-project
 claude
 
 # Then in Claude:
-Audit all files in .
+Audit all files in .<folder/assembly-name>
 ```
 
 **Alternative phrasings:**
