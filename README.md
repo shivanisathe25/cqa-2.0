@@ -12,9 +12,7 @@ You need to have:
 2. **Your product-specific OPL PDF** ready
    - File name format: `OPL-<ProductName>.pdf`
    - Examples: `OPL-OpenShift.pdf`, `OPL-RHEL.pdf`, `OPL-Ansible.pdf`
-   - **Where to get it:** Product docs repository, team lead, or Brand/Legal team
-   - ⚠️ **CRITICAL:** Required for accurate product name validation (CQA 7.1)
-
+   
 > **Don't have your product OPL?** The installation will work, but product name validation will be incomplete. Get your OPL PDF before running audits.
 
 ---
