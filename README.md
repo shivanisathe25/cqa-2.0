@@ -39,7 +39,6 @@ doc-quality-audit-skill/
 │   └── verify-setup.sh              # Automated verification
 ├── docs/
 │   ├── QUICK_START_GUIDE.md
-│   ├── USER_EXPERIENCE_DEMO.md
 │   ├── SOLUTION_SUMMARY.md
 │   └── HOW_TO_MAKE_SLASH_COMMAND.md
 └── README.md                        # This file
@@ -189,7 +188,6 @@ Fix the errors listed above
 ## 📚 Documentation
 
 - **[Quick Start Guide](docs/QUICK_START_GUIDE.md)** - Get up and running
-- **[User Experience Demo](docs/USER_EXPERIENCE_DEMO.md)** - Complete walkthrough
 - **[Solution Summary](docs/SOLUTION_SUMMARY.md)** - Technical details
 - **[Slash Command Guide](docs/HOW_TO_MAKE_SLASH_COMMAND.md)** - Advanced: Convert to /command
 - **[Required Files](standards/REQUIRED_FILES_README.md)** - Setup requirements
@@ -271,7 +269,7 @@ cp /path/to/new/OPL-YourProduct.pdf standards/
 
 ### Getting Help
 
-1. Check [User Experience Demo](docs/USER_EXPERIENCE_DEMO.md)
+1. Review [Quick Start Guide](docs/QUICK_START_GUIDE.md)
 2. Review [Required Files README](standards/REQUIRED_FILES_README.md)
 3. Run verification: `./standards/verify-setup.sh`
 4. [Open an issue](https://github.com/yourusername/doc-quality-audit-skill/issues)
